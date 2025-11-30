@@ -76,7 +76,7 @@ distrito_malaga = distrito_malaga.merge(malaga_airbnb, on='NAME')
 airbnb_malaga = distrito_malaga.plot(
   column="PRICE/MONTH (€)", 
   legend= True, 
-  legend_kwds={"label": "Monthly price of AirBnBs", "orientation": "horizontal"},
+  legend_kwds={"label": "Average monthly price of AirBnBs", "orientation": "horizontal"},
   alpha=0.7, 
   ax=ax,
   cax=cax,
