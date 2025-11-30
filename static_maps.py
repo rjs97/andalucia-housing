@@ -36,11 +36,12 @@ for idx, row in distrito_malaga.iterrows():
     center = row['geometry'].centroid
     ax.text(center.x, center.y, s=row['NAME'], horizontalalignment='center', bbox={'facecolor': 'white', 'alpha':0.8, 'pad': 2, 'edgecolor':'none'})
 
+ax.set_title("Proportion of housing stock used for tourist housing")
 
 vivienda_malaga = distrito_malaga.plot(
   column="% TOURIST HOUSING", 
   legend= True, 
-  legend_kwds={"label": "Percentage of total apartments used for tourist rentals", "orientation": "horizontal"},
+  legend_kwds={"label": "% tourist housing", "orientation": "horizontal"},
   alpha=0.7, 
   ax=ax,
   cax=cax,
@@ -72,6 +73,8 @@ malaga_airbnb = malaga_airbnb[malaga_airbnb['room_type'] == 'Entire home/apt'][[
 
 # create output
 distrito_malaga = distrito_malaga.merge(malaga_airbnb, on='NAME')
+
+ax.set_title("Monthly rent for AirBnB properties")
 
 airbnb_malaga = distrito_malaga.plot(
   column="PRICE/MONTH (€)", 
