@@ -13,6 +13,7 @@ Will create 2 maps: AirBnB & Tourist Housing in English for Málaga
 
 ## Future Work
 - [x] Create README (😁)
-- [ ] Add flags to maps to specify cities and languages
+- [ ] Add flags to map scripts to specify cities and languages
 - [ ] Update requirements.txt (need to straighten out local environments)
   - [ ] Even better: Dockerize the whole thing
+- [ ] Connect website text to Google Doc (requires investigation)
